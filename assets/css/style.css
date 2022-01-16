@@ -1,7 +1,14 @@
-img{
-    max-width: 40%;
-    height: auto;
+
+.clock{
+    margin: 30px 5px;
+    font-size: 50px;
+    text-align: center;
+    font-family: fantasy;
 }
-h1.heading {
-    color: aqua;
+
+#output{
+    font-size: 200px;
+    font-weight: 900;
+    margin-top: 20px;
+
 }

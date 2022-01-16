@@ -1,79 +1,52 @@
-const check_btn = document.querySelector('#agecheck');
-const name = document.querySelector('#name');
-const year = document.querySelector('#year');
-const result = document.querySelector('#result');
+const clock = document.querySelector('.clock');
 
+setInterval(function(){
 
-check_btn.addEventListener('click', () => {
+    let date = new Date();
+    let h = date.getHours();
+    let m = date.getMinutes();
+    let s = date.getSeconds();
+    clock.innerHTML = `${ h > 12 ? (h-12) == 0 ? 12 : (h - 12): h} :  ${ zeroTomi(m)} : ${zeroTomi(s)} ${ h >= 12 ? 'PM' : 'AM'}`;
 
-    if(name.value == '' || year.value == ''){
-        result.innerHTML = `<p class="alert alert-danger">All fields are required <p/>`;   
-    }else{
-        result.innerHTML = ageCal(name.value, year.value);
-    }
 });
 
 
 
+const todo = document.querySelector('#do');
+const add = document.querySelector('#add');
+const list = document.querySelector('#list');
 
-
-
-
-
-const currencyBd =document.querySelector('#currencyBd');
-const amount =document.querySelector('#amount');
-const currency =document.querySelector('#currency');
-const tAmount =document.querySelector('#tAmount');
-
-
-currencyBd.addEventListener('click', () => {
-    if(amount.value == '' || currency.value == ''){
-        tAmount.innerHTML = `<p class="alert alert-danger">All fields are required <p/>`;   
-    }else{
-        tAmount.innerHTML = currencyCal(amount.value, currency.value);
-    }
+add.addEventListener('click',function(){
+    let li = document.createElement('li');
+    li.className = 'list-group-item';
+    li.innerHTML = todo.value;
+    list.appendChild(li);
+    todo.value = '';
 });
 
 
 
+const start = document.querySelector('#go');
+const output = document.querySelector('#output');
+const stop = document.querySelector('#stop');
+const count = document.querySelector('#count');
+const loader = document.querySelector('.loader');
 
 
-const mcheck_btn = document.querySelector('#magecheck');
-const pname = document.querySelector('#pname');
-const myear = document.querySelector('#myear');
-const mASresult = document.querySelector('#mASresult');
+let counter_value;
+let counter;
 
+start.addEventListener('click', () => {
+    counter_value = count.value;
+    
 
-mcheck_btn.addEventListener('click', () => {
-
-    if(pname.value == '' || myear.value == ''){
-        mASresult.innerHTML = `<p class="alert alert-danger">All fields are required <p/>`;   
-    }else{
-        mASresult.innerHTML = mAgeCal(pname.value, myear.value);
-    }
+    counter = setInterval(() => {
+        output.innerHTML = counter_value;
+        
+        if(counter_value == 0){
+            clearInterval(counter)
+        }
+        
+        counter_value--;
+    },1000);
 });
-
-
-
-
-let abc =50;
-console.log(abc);
-
-debugger;
-console.log(200);
-
-
-// let mage = Number(prompt('Enter The Number : '));
-
-
-// if(mage <= 0 || mage <= 17){
-//     console.log('apnar biyer boyos hoyni');
-// }
-// else if(mage>=18 && mage<32){
-//     console.log(`apnar biyer boyos hoyche`);
-// }else if(mage>=32 && mage<48){
-//     console.log(`apnar biyer boyos cole jacche`);
-// }
-// else{
-//     console.log(`apnar biyer boyos ses`);
-// }
