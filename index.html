@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Age Calculator -->
+ <div class="card w-50 mx-auto m-5 shadow ">
+     <div class="card-header">
+         <h2 class="card-title text-center">Age Calculator</h2>
+     </div>
+     <div class="card-body">
+         <div class="form-group my-4">
+             <input id="name" type="text" class="form-control" placeholder="Name">
+         </div>
+         <div class="form-group">
+            <input id="year" type="text" class="form-control" placeholder="Year" >
+        </div>
+        <div class="form-group my-4">
+            <input id="agecheck" class="btn w-100 btn-primary"  type="submit" value="Check">  
+        </div>
+     </div>
+     <div class="card-footer">
+         <p id="result"></p>
+     </div>
+ </div>
+
+ <!-- Currency Calculator -->
+ <div class="card w-50 mx-auto m-5 shadow ">
+    <div class="card-header">
+        <h2 class="card-title text-center">Currency Calculator</h2>
+    </div>
+    <div class="card-body">
+        <div class="form-group my-4">
+            <input id="amount" type="text" class="form-control" placeholder="Amount">
+        </div>
+        <div class="form-group">
+           <select name="" id="currency">
+               <option value="">Currency</option>
+               <option value="86">USD</option>
+               <option value="98">EUR</option>
+               <option value="62">AUD</option>
+               <option value="68">CAD</option>
+               <option value="116">GBP</option>
+           </select>
+       </div>
+       <div class="form-group my-4">
+           <input id="currencyBd" class="btn w-100 btn-primary"  type="submit" value="currency">  
+       </div>
+    </div>
+    <div class="card-footer">
+        <p id="tAmount"></p>
+    </div>
+</div>
+
+    <!-- Marriage age check calculator -->
+    <div class="card w-50 mx-auto m-5 shadow ">
+        <div class="card-header">
+            <h2 class="card-title text-center">Marriage age check Calculator</h2>
+        </div>
+        <div class="card-body">
+            <div class="form-group my-4">
+                <input id="pname" type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+               <input id="myear" type="text" class="form-control" placeholder="Year" >
+           </div>
+           <div class="form-group my-4">
+               <input id="magecheck" class="btn w-100 btn-primary"  type="submit" value="Result">  
+           </div>
+        </div>
+        <div class="card-footer">
+            <p id="mASresult"></p>
+        </div>
+    </div>
+   
+    <script src="assets/js/jQuery-3.6.0-min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/funtions.js"></script>
+    <!-- <script src="assets/js/fromValitation.js"></script> -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
